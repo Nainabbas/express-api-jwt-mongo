@@ -1,7 +1,7 @@
 const User = require("../models/user.model");
 var jwt = require("jsonwebtoken");
 
-exports.index = async function index(req, res) {
+exports.index = async function(req, res) {
   const { token } = req.headers;
   //check if token was sent or not
   if (token) {

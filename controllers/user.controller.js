@@ -1,7 +1,7 @@
 const User = require("../models/user.model");
 var jwt = require("jsonwebtoken");
 
-exports.register = async function register(req, res) {
+exports.register = async function(req, res) {
   const { name, email, password } = req.body;
   let user = new User({ name, email, password });
   try {
@@ -12,7 +12,7 @@ exports.register = async function register(req, res) {
   }
 };
 
-exports.login = async function login(req, res) {
+exports.login = async function(req, res) {
   try {
     const { email, password } = req.body;
     //find the user
